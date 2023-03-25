@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./new.js"></script>
+    <!-- Favicon -->
+    <!-- Favicon -->
+    <link href="https://www.haui.edu.vn/dnn/web/haui/assets/images/favicon.png" rel="icon" type="image/png">
+    <link href="https://www.haui.edu.vn/dnn/web/haui/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <script src="./bootstrap/js/bootstrap(2).min.js"></script>
+    <!-- Efinance Title -->
+    <title>ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI || HaUI</title>
+    <link href="/vn/content/css?v=h2hKuYCVfisLKlDUHnSQjigPx2h5ZHfr1rbDdB8Ii_o1" rel="stylesheet"/>
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <script async type="text/javascript">
+        var oAppPath = 'https://www.haui.edu.vn/vn/', oDnnUrl = 'https://www.haui.edu.vn/dnn/', oTemplateApp = 'haui', oMediaUrl = 'https://www.haui.edu.vn/media/';
+        var dnnUrlFull = oDnnUrl;
+        var oRootUrl = 'https://www.haui.edu.vn';
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #f0f0f0;
+            height: 3800px;
+        }
+        .menu-head{
+            height: 35px;
+            width: 100%;
+            background-color: #0D4E96;
+        }
+        ul{
+            list-style: none;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+        }
+        .menu>li{
+            padding: 0px 10px;
+            border-right: 1px solid #fff;
+            border-left: 1px solid #fff;
+        }
+        .menu-head>ul:first-child >li >a{
+            color: #fff;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+        .menu_con{
+            background-color: antiquewhite;
+            position: absolute;
+            top: 35px;
+            margin-left: -10px;
+        }
+        li a{
+            display: block;
+            height: 40px;
+            line-height: 40px;
+        }
+        .menu_con li{
+            padding: 0 20px;
+            background-color: #fff;
+            border: 1px solid rgb(215, 208, 208);
+        }
+        .menu_conT li{
+            padding: 0 20px;
+            background-color: #fff;
+            border: 1px solid rgb(215, 208, 208);
+        }
+        .menu_con{
+            display: none;
+            clear: left;
+            z-index: 3;
+        }
+        .menu>li:hover .menu_con{
+            display: block;
+        }
+        .menu>li:hover .menu_conT{
+            display: block;
+        }
+        .menu_con li:hover{
+            background-color: rgb(240, 241, 243);
+        }
+        .menu_conT li:hover{
+            background-color: rgb(240, 241, 243);
+        }
+        .icon_menu1{
+            width: 30px;
+        }
+        .icon_menu2{
+            width: 30px;
+            height: 20px;
+        }
+        .img_menu{
+            width: 260px;
+            height: 55px;
+            margin-top: 5px;
+            margin-right: 10px;
+            margin-left: 5px;
+        }
+        .home{
+            width: 20px;
+        }
+        .menu_content{
+            height: 100px;
+            background-color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0 0 20px 0 rgb(128, 122, 114);
+            position: relative;
+            z-index: 2;
+        }
+        .menu_content li{
+            height: 40px;
+        }
+        .menu_content a{
+            text-transform: uppercase;
+            color: #0D4E96;
+        }
+        .menu_content>ul>li a{
+            margin-top: 12px;
+            font-weight: 650;
+            font-size: 13px;
+        }
+        .menu_content>ul>li{
+            padding: 0 10px;
+        }
+        .menu_content .menu_con{
+            position: absolute;
+            top:160px;
+        }
+        .menu_con li{
+            position: relative;
+        }
+        .menu_conT{
+            border-top: 2px solid #0D4E96;
+            width: 320px;
+            position: absolute;
+            display: none;
+        }
+        .menu_conT li{
+            height: 40px;
+            position: relative;
+        }
+        .menu_conT a{
+            display: contents;
+            line-height: 40px;
+        }
+        .menu_con1{
+            
+            border-top: 2px solid #0D4E96;
+            position: absolute;
+            top: -2.5px;
+            display: none;
+        }
+        .menu_con1 li{
+            width: 300px;
+        }
+        .menu_conT li:hover .menu_con1{
+            display: block;
+            left: 318px;
+            z-index: 3;
+        }
+        .content_1 table{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .content_1 table tr{
+            display: flex;
+        }
+        .content_1 td{
+            display: block;
+            height: 55px;
+            width: 197px;
+            background-color: #0D4E96;
+            text-align: center;
+            margin: 0 2px;
+            line-height: 55px;
+        }
+        .content_1 a:hover{
+            font-size: 14px;
+        }
+        .content_1 a{
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+        .content_2{
+            display: grid;
+            grid-template-columns: 71% 28%;
+            gap: 1%;
+            padding: 0 50px;
+            margin-top: 30px;
+        }
+        .content_2 .tintuc{
+            display: grid;
+            grid-template-columns: 40% 55%;
+            gap: 5%;
+            background-color: #fff;
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+        #img_left_tintuc{
+            width: 355px;
+            height: 265px;
+        }
+        .img_right_tintuc{
+            width: 100px;
+            height: 80px;
+            margin-right: 10px;
+        }
+        .thongbao img{
+            width: 95%;
+            height: 240px;
+        }
+        .content_2 h3{
+            font-size: 25px;
+            text-transform: uppercase;
+            color: #0D4E96;
+            padding: 20px 0;
+        }
+        .content_2 h4{
+            font-size: 18px;
+        }
+        .content_2 h4:hover{
+            color: red;
+        }
+        .content_2 p, .content_2 td a{
+            font-size: 16px;
+            color: #5c5656;
+        }
+        .btn-top {
+            border: medium none;
+            bottom: 20px;
+            cursor: pointer;
+            display: none;
+            outline: medium none;
+            padding: 0;
+            position: fixed;
+            right: 20px;
+            z-index: 9999;
+        }
+        #top{
+            width: 50px;
+        }
+        .tintuc .right table{
+            margin-top: 80px;
+            width: 450px;
+        }
+        .right table tr{
+            display: block;
+            padding-bottom: 5px;
+        }
+        .tintuc .left p{
+            margin-top: 20px;
+        }
+        .thongbao p{
+            padding: 10px 0;
+            padding-left: 10px;
+            border-top: 1px solid rgb(197, 192, 192);
+        }
+        .thongbao, .gocnhin, .toananh{
+            width: 350px;
+            background-color: #fff;
+            padding: 0 5px;
+            border-top:  2px solid #0D4E96;
+        }
+        .slide img, .slide1 img{
+            width: 100%;
+        }
+        .thongbao h3{
+            text-align: center;
+        }
+        .thongbao img{
+            display: block;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+        .slide .mySlides1{
+            margin-top: 20px;
+        }
+        .gocnhin{
+            padding: 0;
+            border: none;
+            background-color: #08387000;
+        }
+        .gocnhin p{
+            padding: 10px 0;
+            border-bottom: 1px solid rgb(197, 192, 192);
+        }
+        .gocnhin .box_first{
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 10px;
+            border-top:  2px solid #0D4E96;
+            margin-bottom: 80px;
+        }
+        .gocnhin h3{
+            text-align: center;
+            border-bottom: 1px solid rgb(197, 192, 192);
+        }
+        .gocnhin #text_last{
+            border: none;
+        }
+        .toananh img{
+            width: 100%;
+            height: 145px;
+            margin-bottom: 60px;
+            border-radius: 5px;
+        }
+        .toananh a:last-child img{
+            padding: 0;
+            margin: 0;
+        }
+        .toananh{
+            border: none;
+            background-color: #0d4d9600;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        .sticky + .slide1 img{
+            padding-top: 90px;
+        }
+        .content_3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 50px;
+            margin: 30px 0;
+            background-color: #fdfafd;
+        }
+    .content_3_1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        gap: 1%;
+    }
+    .content_3_1 img{
+        width: 380px;
+        height: 250px;
+        display: block;
+        transition: all 0.3s ease-in-out;
+
+    }
+    .content_3_1>div>div a{
+        overflow: hidden;
+    }
+    .content_3_1>div>div a:first-child{
+        border-radius: 10px 10px 0 0;
+    }
+    .content_3_1>div div:hover img{
+        transform: scale(1.1);
+    }
+    .content_3_1 div{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        width: 100%;
+    }
+    .content_3 h3, .content_3_1>div> p, span{
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 20px;
+        color: #0D4E96;
+    }
+    .content_3_1 a{
+        text-align: center;
+        font-size: 20px;
+        color: #0D4E96;
+    }
+    .text_imga{
+        text-transform: uppercase;
+    }
+    .footerr{
+        height: 350px;
+        width: 100%;
+        margin-top: 100px;
+        background-image: url(./R.png);
+        display: flex;
+        flex-direction: column; 
+    }
+    .footerr table img{
+        width: 15px;
+    }
+    .link_footerr img{
+        width: 40px;
+    }
+    .content_footer{
+        padding: 30px 50px 70px 50px;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        position: relative;
+    }
+    .footerr #text{
+        display: block;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+    }
+    .footerr p, .footerr a{
+        color: #fff;
+    }
+    #end{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 50px;
+        background-color: #083870;
+        text-align: center;
+        line-height: 50px;
+    }
+    .content_left{
+        display: grid;
+        grid-template-columns: 33% 67%;
+        margin-right: 25px;
+    }
+    .footerr p, .footerr tr{
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    .text_first{
+        font-size: 20px;
+        font-weight: 300;
+        color: #fff;
+    }
+    .footerr ul{
+        margin-left: 20px;
+    }
+    .slider_main{
+        display: flex;
+        flex-direction: row;
+    }
+    .content_slide{
+        height: 80px;
+        background-color: #0D4E96;
+        width: 100%;
+    }
+    .carousel-inner{
+        position: relative;
+        z-index: 1;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    .slide_2{
+        padding-left: 40px;
+        padding-right: 20px;
+        margin-top: 30px;
+        width: 100%;
+    }
+    .content_end{
+        padding: 0 50px;
+        position: relative;
+        z-index: 1;
+        top:-130px;
+    }
+    .sticky+.slide_1{
+        margin-top: 100px;
+    }
+    .me_nu{
+        width: 180px;
+    }
+    .button_down{
+        width: 9px;
+    }
+    .slider_main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slider_main .items img{
+        margin: 0 10px;
+        width: 230px;
+        border-radius: 10px;
+    }
+    #x{
+        display: none;
+    }
+    .content_2, .content_3, .content_5, .content_slide{
+        padding: 0 40px;
+    }
+    .noi_dung{
+        display: flex;
+        justify-content: center;
+        height: 0px;
+        
+        margin-top: 30px;
+    }
+    .noi_dung>div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .noi_dung #second{
+        margin-left: 355px;
+        margin-right: -140px;
+        position: relative;
+        left: -250px;
+    }
+    #line{
+        display: flex;
+        flex-direction: row;
+    }
+    #line p{
+        font-size: 35px;
+        font-weight: 500;
+        color: #0D4E96;
+    }
+    span{
+        font-size: 35px;
+        font-weight: 500;
+        color: #0D4E96;
+    }
+    .noi_dung p{
+        width: 305px;
+        font-size: 22px;
+        text-align: center;
+        font-weight: 495;
+        color: #0D4E96;
+    }
+    .content_end p{
+        width: 380px;
+        height: 50px;
+        line-height: 50px;
+        display: block;
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+    }
+    .content_end img{
+        border-radius: 10px 10px 0 0;
+    }
+    .content_end{
+        margin-top: 0px;
+    }
+    .footerr{
+        margin: 0;
+        margin-top: -170px;
+    }
+    .menu_conT li:hover a{
+        display: block;
+        margin-left: -5px;
+        margin-top: -0px;
+    }
+    .content_1{
+        padding-left: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="menu-head">
+        <ul class="menu">
+            <li><a href="">Lãnh đạo</a>
+            <ul class="menu_con">
+                <li><a href="">Đảng ủy</a></li>
+                <li><a href="">Hội đồng trường</a></li>
+                <li><a href="">Ban giám hiệu</a></li>
+            </ul></li>
+            <li><a href="">Phòng</a>
+            <ul class="menu_con">
+                <li><a href="">Phòng Tổ chức hành chính</a></li>
+                <li><a href="">Phòng Đào tạo</a></li>
+                <li><a href="">Phòng Khoa học công nghệ</a></li>
+                <li><a href="">Phòng Công tác sinh viên</a></li>
+                <li><a href="">Phòng Tài chính kế toán</a></li>
+                <li><a href="">Phòng Quản trị</a></li>
+                <li><a href="">Phòng Thanh tra giáo dục</a></li>
+            </ul></li>
+            <li><a href="">Khoa</a>
+            <ul class="menu_con">
+                <li><a href="">Khoa Cơ khí</a></li>
+                <li><a href="">Khoa Công nghệ Ô tô</a></li>
+                <li><a href="">Khoa Điện</a></li>
+                <li><a href="">Khoa Điện tử</a></li>
+                <li><a href="">Khoa Công nghệ thông tin</a></li>
+                <li><a href="">Khoa Công nghệ may & TKTT</a></li>
+                <li><a href="">Khoa Công nghệ Hóa</a></li>
+                <li><a href="">Khoa Kế toán-Kiểm toán</a></li>
+                <li><a href="">Khoa Quản trị kinh doanh</a></li>
+                <li><a href="">Khoa Lý luận chính trị - Pháp luật</a></li>
+                <li><a href="">Khoa Khoa học cơ bản</a></li>
+            </ul></li>
+            <li><a href="">TT Đào tạo</a>
+            <ul class="menu_con">
+                <li><a href="">Trung tâm Đào tạo sau đại học</a></li>
+                <li><a href="">Trung tâm Hợp tác quốc tế</a></li>
+                <li><a href="">Trung tâm Việt Nhật</a></li>
+                <li><a href="">Trung tâm Cơ khí</a></li>
+                <li><a href="">Trung tâm công nghệ thông tin</a></li>
+                <li><a href="">Trung tâm Công nghệ ô tô & Đào tạo lái xe</a></li>
+                <li><a href="">Trung tâm Giáo dục thể chất & Thể thao</a></li>
+                <li><a href="">Trung tâm Giáo dục Quốc phòng An ninh</a></li>
+                <li><a href="">Trung tâm Đào tạo thường xuyên</a></li>
+            </ul></li>
+            <li><a href="">TT Dịch vụ</a>
+            <ul class="menu_con">
+                <li><a href="">Trung tâm Đảm bảo chất lượng</a></li>
+                <li><a href="">Trung tâm khảo thí</a></li>
+                <li><a href="">Trung tâm hợp tác doanh nghiệp</a></li>
+                <li><a href="">Trung tâm Thông tin Thư viện</a></li>
+                <li><a href="">Trung tâm Hỗ trợ Sinh viên</a></li>
+                <li><a href="">Trung tâm Truyền thông & Quan hệ Công chúng</a></li>
+                <li><a href="">Trạm y tế</a></li>
+            </ul></li>
+            <li><a href="">Viện nghiên cứu</a></li>
+            <li><a href="">Lecyco</a></li>
+            <li><a href="">Trường Ngoại ngữ-Du lịch</a></li>
+            <li><a href="">Đoàn thể</a>
+            <ul class="menu_con">
+                <li><a href="">Công đoàn</a></li>
+                <li><a href="">Đoàn thanh niên</a></li>
+                <li><a href="">Hội sinh viên</a></li>
+            </ul></li>
+            <li><a href="">Tap chí KH&CN</a>
+            <ul class="menu_con">
+                <li><a href="">Giới thiệu</a></li>
+                <li><a href="">Thể lệ viết và gửi bài</a></li>
+                <li><a href="">Tạp chí đã xuất bản</a></li>
+                <li><a href="">Liên hệ</a></li>
+            </ul></li>
+            <li><a href="">Thư viện</a></li>
+            <li><a href="">Thư điện tử</a></li>
+            <li><a href="">SItemap</a></li>
+        </ul>
+      </div>
+      <div class="menu_content">
+        <a href=""><img class="img_menu" src="https://www.haui.edu.vn/dnn/web/haui/assets/images/logo-ngang.webp" alt=""></a>
+        <ul class="menu">
+            <li><a href=""><img class="home" src="https://th.bing.com/th/id/OIP.zbpAS4xB1_ij-PnQ8mJDDQHaG_?pid=ImgDet&rs=1" alt=""></a></li>
+            <li id="nav_GT1"><a href="">Giới thiệu <img class="button_down" src="https://cdn4.iconfinder.com/data/icons/24x24-grid-line-symbols-1-1/1024/arrow_down_app_software_mobile___-512.png" alt=""></a>
+            <ul  class="menu_conT">
+                <li><a href="">Phát biểu, chúc mừng của hiệu trưởng</a></li>
+                <li><a href="">Tổng quan</a>
+                <ul class="menu_con1">
+                    <li><a href="">Lịch sử</a></li>
+                    <li><a href="">Quy mô đào tạo</a></li>
+                    <li><a href="">Đội ngũ cán bộ</a></li>
+                    <li><a href="">Cơ sở vật chất</a></li>
+                    <li><a href="">Nghiên cứu khoa học</a></li>
+                    <li><a href="">Danh hiệu thi đua</a></li>
+                </ul></li>
+                <li><a href="">Chiến lược phát triển</a></li>
+                <li><a href="">Cơ cấu tổ chức</a>
+                <ul class="menu_con1">
+                    <li><a href="">Sơ đồ tổ chức</a></li>
+                    <li><a href="">BCH Đảng bộ trường</a></li>
+                    <li><a href="">Hội đồng trường</a></li>
+                    <li><a href="">Ban giám hiệu</a></li>
+                    <li><a href="">Các tổ chức đoàn thể</a></li>
+                    <li><a href="">Viện - Khoa đào tạo</a></li>
+                    <li><a href="">Phòng - ban - trung tâm</a></li>
+                </ul></li>
+                <li><a href="">Ba công khai</a></li>
+                <li><a href="">Kết quả khảo sát khách hàng</a>
+                <ul class="menu_con1">
+                    <li><a href="">Báo cáo khảo sát CBVC</a></li>
+                    <li><a href="">Báo cáo khảo sát sinh viên</a></li>
+                </ul></li>
+                <li><a href="">Nhận diện thương hiệu</a></li>
+                <li><a href="">Liên hệ</a></li>
+            </ul></li>
+            <li title="Tuyển sinh"><a href="">Tuyển sinh</a></li>
+            <li title="Đào tạo"><a href="">Đào tạo <img class="button_down" src="https://cdn4.iconfinder.com/data/icons/24x24-grid-line-symbols-1-1/1024/arrow_down_app_software_mobile___-512.png" alt=""></a>
+            <ul class="menu_conT me_nu" >
+                <li><a href="">Sau đại học</a></li>
+                <li><a href="">Đại học</a></li>
+                <li><a href="">Tra cứu thông tin</a></li>
+            </ul></li>
+            <li title="Khoa học công nghệ"><a href="">Khoa học công nghệ</a></li>
+            <li title="Hướng nghiệp"><a href="">Hướng nghiệp</a></li>
+            <li><a href="">Sinh viên <img class="button_down" src="https://cdn4.iconfinder.com/data/icons/24x24-grid-line-symbols-1-1/1024/arrow_down_app_software_mobile___-512.png" alt=""></a>
+            <ul class="menu_conT me_nu">
+                <li><a href="">Hỗ trợ sinh viên</a></li>
+                <li><a href="">Công tác đoàn hội</a></li>
+                <li><a href="">Cựu sinh viên</a></li>
+            </ul></li>
+            <li title="Egov"><a href="">EGOV</a></li>
+            <li><a href=""><img title="Tiếng Việt" class="icon_menu1" src="https://th.bing.com/th/id/OIP.inPaBht6vFg86TTYtr2bEwAAAA?pid=ImgDet&rs=1" alt=""></a></li>
+            <li><a href=""><img title="Tiếng Anh" class="icon_menu2" src="https://th.bing.com/th/id/OIP.3TPsHFnQUwEQXcJeoIwxVQHaDt?pid=ImgDet&rs=1" alt=""></a></li>
+        </ul>
+      </div>
+      <div class="slide_1">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href=""><img class="d-block w-100" src="https://www.haui.edu.vn/media/2/ufi2708.jpg" alt="First slide"></a>
+              </div>
+              <div class="carousel-item">
+                <a href=""><img class="d-block w-100" src="https://www.haui.edu.vn/media/2/ufi2700.jpg" alt="Second slide"></a>
+              </div>
+              <div class="carousel-item">
+                <a href=""><img class="d-block w-100" src="https://www.haui.edu.vn/media/2/ufi2707.jpg" alt="Third slide"></a>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+      </div>
+
+    </div>
+      
+      <div class="content_1">
+        <table>
+            <tr>
+                <td><a href="">Khảo thí</a></td>
+                <td><a href="">Đảm bảo chất lượng</a></td>
+                <td><a href="">Hợp tác doanh nghiệp</a></td>
+                <td><a href="">Hợp tác quốc tế</a></td>
+                <td><a href="">Đại học điện tử</a></td>
+                <td><a href="">Văn bản pháp luật</a></td>
+            </tr>
+        </table>
+      </div>
+      <div class="content_2">
+        <div class="tintuc">
+            <div class="left">
+                <a href=""><h3>Tin tức</h3></a>
+                <a href=""><img title="HaUI hợp tác với NATV trong đào tạo nhân lực chất lượng cao" id="img_left_tintuc" src="https://www.haui.edu.vn/media/88/t88843.jpg" alt=""></a>
+                <a href=""><h4 id="title">HaUI hợp tác với NATV trong đào tạo nhân lực chất lượng cao</h3></a>
+                <p>Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</p>
+            </div>
+            <div class="right">
+                <table>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88748.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                    <tr>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88714.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88679.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                    <tr>
+                        <td><a  href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88657.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                    <tr>
+                        <td><a  href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88606.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="thongbao">
+            <a href=""><h3>Thông báo</h3></a>
+            <a href="">
+                <p title="Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa">>>Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa</p>
+            </a><a href="">
+                <p title="Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa">>>Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa</p>
+            </a><a href="">
+                <p title="Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa">>>Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa</p>
+            </a>
+            <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/banner/ptt3d.webp" alt=""></a>
+        </div>
+      </div>
+      <div class="footer"> <a class="btn-top" href="javascript:void(0);" title="Top" style="display: inline;"><img id="top" src="https://openclipart.org/image/800px/svg_to_png/30661/tango-up-arrow-blue.png" alt=""></a> </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="slide_2">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <a href=""><img class="d-block w-100" src="https://www.haui.edu.vn/media/2/ufi2656.jpg" alt="First slide"></a>
+                </div>
+                <div class="carousel-item">
+                  <a href=""><img class="d-block w-100" src="https://www.haui.edu.vn/media/2/ufi2659.jpg" alt="Second slide"></a>
+                </div>
+                <div class="carousel-item">
+                  <a href=""><img class="d-block w-100" src="https://www.haui.edu.vn/media/2/ufi2666.jpg" alt="Third slide"></a>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        </div>
+      <div class="content_2">
+        <div class="tintuc">
+            <div class="left">
+                <a href=""><h3>Sự kiện</h3></a>
+                <a href=""><img title="HaUI hợp tác với NATV trong đào tạo nhân lực chất lượng cao" id="img_left_tintuc" src="https://www.haui.edu.vn/media/88/t88843.jpg" alt=""></a>
+                <a href=""><h4 id="title">HaUI hợp tác với NATV trong đào tạo nhân lực chất lượng cao</h3></a>
+                <p>Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</p>
+            </div>
+            <div class="right">
+                <table>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88748.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88714.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88679.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88657.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88606.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="gocnhin">
+            <div class="box_first">
+                <a href=""><h3>Góc nhìn Haui</h3></a>
+            <a href="">
+                <p title="Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa">>>Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa</p>
+            </a><a href="">
+                <p title="Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa">>>Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa</p>
+            </a><a href="">
+                <p title="Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa" id="text_last">>>Kế hoạch tổ chức Lễ kỷ niệm 20 năm ngày thành lập khoa Công nghệ Hóa</p>
+            </a>
+            </div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://www.haui.edu.vn/media/2/ufi2680.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://www.haui.edu.vn/media/2/ufi2705.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="https://www.haui.edu.vn/media/2/ufi2706.jpg" alt="Third slide">
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="content_2">
+        <div class="tintuc">
+            <div class="left">
+                <a href=""><h3>Hoạt động sinh viên</h3></a>
+                <a href=""><img title="HaUI hợp tác với NATV trong đào tạo nhân lực chất lượng cao" id="img_left_tintuc" src="https://www.haui.edu.vn/media/88/t88843.jpg" alt=""></a>
+                <a href=""><h4 id="title">HaUI hợp tác với NATV trong đào tạo nhân lực chất lượng cao</h3></a>
+                <p>Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</p>
+            </div>
+            <div class="right">
+                <table>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88748.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88714.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88679.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH...</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88657.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img class="img_right_tintuc" src="https://www.haui.edu.vn/media/88/m88606.jpg" alt=""></a></td>
+                        <td><a title="Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH CSE" href="">Ngày 21/3, TS.Kiều Xuân Thực, Hiệu trưởng Trường Đại học Công nghiệp Hà Nội đã có buổi tiếp và làm việc với Công ty TNHH</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="toananh">
+            <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/banner/360HaUI.jpg" alt=""></a>
+            <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/banner/hauitv.jpg" alt=""></a>
+            <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/banner/BaoChiVeHaUI.jpg" alt=""></a>
+        </div>
+      </div>
+      <div class="content_3">
+        <h3>Khoa học công nghệ</h3>
+        <div class="noi_dung">
+            
+            <div>
+                <div id="line"><p>TOP  <span class="counter" data-count="25">0</span></p></div>
+                <p>Đại học dẫn đầu về nghiên cứu tại Việt Nam</p></div>
+            <div id="second"><span class="counter" data-count="150">0</span>
+                <p>Công bố quốc tế</p></div>
+            <div><span class="counter" data-count="550">0</span>
+                <p>Đề tài / đề án khoa học công nghệ</p></div>
+        </div>
+        <div class="content_3_1">
+            <div>
+                <div>
+                    <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/science/tin-khcn.webp" alt=""></a>
+                    <a href=""><p class="text_img">Tin khoa học công nghệ</p></a>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/science/cong-bo-quoc-te.webp" alt=""></a>
+                    <a href=""><p class="text_img">Công bố quốc tế</p></a>
+                </div>
+            </div>
+            <div>
+                
+                <div>
+                    <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/science/nhiem-vu-khcn.webp" alt=""></a>
+                    <a href=""><p class="text_img">Nhiệm vụ khoa học công nghệ</p></a>
+                </div>
+            </div>
+        </div>
+</div>
+<div id="conten_slider">
+    <div class="content_slider_main">
+        <div class="slider_slick">
+            <div class="slider_wrap">
+                <div id="slider_main" class="slider_main">
+                    <div class="items">
+                        <img id="x" class="img_slick" src="./assets/img/a30.jpg" alt="">
+                    </div>
+                    <div class="items">
+                        <img  class="img_slick" src="https://www.haui.edu.vn/dnn/web/haui/assets/images/logo/company/tc11.jpg" alt="">
+                    </div>
+                    <div class="items">
+                        <img class="img_slick" src="https://www.haui.edu.vn/dnn/web/haui/assets/images/logo/company/tc12.jpg" alt="">
+                    </div>
+                    <div class="items">
+                        <img  class="img_slick" src="https://www.haui.edu.vn/dnn/web/haui/assets/images/logo/company/tc13.jpg" alt="">
+                    </div>
+                    <div class="items">
+                        <img  class="img_slick" src="https://www.haui.edu.vn/dnn/web/haui/assets/images/logo/company/tc14.jpg" alt="">
+                    </div>
+                    <div class="items">
+                        <img  class="img_slick" src="https://www.haui.edu.vn/dnn/web/haui/assets/images/logo/company/tc15.jpg" alt="">
+                    </div>
+                    <div class="items">
+                        <img id="x"  class="img_slick" src="https://www.haui.edu.vn/dnn/web/haui/assets/images/logo/company/tc2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        var sliderMain = document.getElementById('slider_main')
+        var item = sliderMain.getElementsByClassName('items')
+        function next3 () {
+            sliderMain.append(item[0]);
+        }
+        function prev3() {
+            sliderMain.prepend(item[item.length - 1])
+        }
+        setInterval(next3,5000)
+    </script>
+</div>
+<div class="content_end">
+    <div class="content_3_1">
+        <div>
+            <div>
+                <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/video/cs1.webp" alt=""></a>
+                <a href=""><p class="text_img">CƠ SỞ 1</p></a>
+            </div>
+        </div>
+        <div>
+            <div>
+                <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/video/cs2.webp" alt=""></a>
+                <a href=""><p class="text_img">CƠ SỞ 2</p></a>
+            </div>
+        </div>
+        <div>
+            <div>
+                <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/video/vd2.webp" alt=""></a>
+                <a href=""><p class="text_img">CƠ SỞ 3</p></a>
+            </div>
+        </div>
+    </div>
+</div>
+      <div class="footerr">
+
+        <div class="content_footer">
+            <div class="content_left">
+                <a href="">
+                    <img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/logo.png" alt="">
+                </a>
+                <div>
+                    <h1 class="text_first">Bản đồ chỉ dẫn</p>
+                    <p>Đại học Công nghiệp Hà Nội</p>
+                    <div id='map'>
+                            <iframe style="width: 100%; height: 140px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.473663078479!2d105.7329181153141!3d21.053735992300247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345457e292d5bf%3A0x20ac91c94d74439a!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1679551444046!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 class="text_first">Trụ sở chính</p>
+                <table>
+                    <tr>
+                        <td><img src="https://th.bing.com/th/id/R.398b99fbaa589aeebe04eb9bf698879c?rik=vGeVzw1Dh8HnPg&riu=http%3a%2f%2ficecontact.com%2fwp-content%2fuploads%2f2016%2f03%2fGrey_Location_Pin_Icon.png&ehk=FB9NjBZo9O9t05ag6CXh1gPt37%2bXwy1JM7CWA3T37qs%3d&risl=&pid=ImgRaw&r=0" alt=""></td>
+                        <td><p>Số 298 đường Cầu Diễn, quận Bắc Từ Liêm, Hà Nội</p></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://th.bing.com/th/id/R.398b99fbaa589aeebe04eb9bf698879c?rik=vGeVzw1Dh8HnPg&riu=http%3a%2f%2ficecontact.com%2fwp-content%2fuploads%2f2016%2f03%2fGrey_Location_Pin_Icon.png&ehk=FB9NjBZo9O9t05ag6CXh1gPt37%2bXwy1JM7CWA3T37qs%3d&risl=&pid=ImgRaw&r=0" alt=""></td>
+                        <td><p>+84 243 765 5121</p></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://th.bing.com/th/id/R.398b99fbaa589aeebe04eb9bf698879c?rik=vGeVzw1Dh8HnPg&riu=http%3a%2f%2ficecontact.com%2fwp-content%2fuploads%2f2016%2f03%2fGrey_Location_Pin_Icon.png&ehk=FB9NjBZo9O9t05ag6CXh1gPt37%2bXwy1JM7CWA3T37qs%3d&risl=&pid=ImgRaw&r=0" alt=""></td>
+                        <td><p>Email: dhcnhn@haui.edu.vn</p></td>
+                    </tr>
+                </table>
+                <h1 class="text_first">Các cơ sở khác</p>
+                <table>
+                    <tr>
+                        <td><img src="https://th.bing.com/th/id/R.398b99fbaa589aeebe04eb9bf698879c?rik=vGeVzw1Dh8HnPg&riu=http%3a%2f%2ficecontact.com%2fwp-content%2fuploads%2f2016%2f03%2fGrey_Location_Pin_Icon.png&ehk=FB9NjBZo9O9t05ag6CXh1gPt37%2bXwy1JM7CWA3T37qs%3d&risl=&pid=ImgRaw&r=0" alt=""></td>
+                        <td><p>Cơ sở 2: Phường Tây Tựu, Bắc Từ Liêm, Hà Nội</p></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://th.bing.com/th/id/R.398b99fbaa589aeebe04eb9bf698879c?rik=vGeVzw1Dh8HnPg&riu=http%3a%2f%2ficecontact.com%2fwp-content%2fuploads%2f2016%2f03%2fGrey_Location_Pin_Icon.png&ehk=FB9NjBZo9O9t05ag6CXh1gPt37%2bXwy1JM7CWA3T37qs%3d&risl=&pid=ImgRaw&r=0" alt=""></td>
+                        <td><p>Cơ sở 3: Lê Hồng Phong, TP. Phủ Lý, Hà Nam</p></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h1 class="text_first">Liên kết site</p>
+                <ul>
+                    <li><a href="">Trường Đại học Công nghiệp Hà Nội</a></li>
+                    <li><a href="">Cổng thông tin tuyển sinh</a></li>
+                    <li><a href="">Hành chính điện tử</a></li>
+                    <li><a href="">Đào tạo trực tuyến</a></li>
+                    <li><a href="">Cổng thông tin đào tạo</a></li>
+                </ul>
+                <div class="link_footerr">
+                    <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/svg/facebook.svg" alt=""></a>
+                    <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/svg/youtube.svg" alt=""></a>
+                    <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/svg/zalo.png" alt=""></a>
+                    <a href=""><img src="https://www.haui.edu.vn/dnn/web/haui/assets/images/svg/tiktok.svg" alt=""></a>
+                <div>
+            </div>
+        </div>
+      </div>
+      <div id="end"><p>Copyright © 2021 Đại Học Công Nghiệp Hà Nội</p></div>
+      <script>
+        jQuery(document).ready(function($){ 	
+	    if($(".btn-top").length > 0){
+		$(window).scroll(function () {
+			var e = $(window).scrollTop();
+			if (e > 300) {
+				$(".btn-top").show()
+			} else {
+				$(".btn-top").hide()
+			}
+		});
+		$(".btn-top").click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			})
+		})
+	}		
+});
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementsByClassName("menu_content")[0];
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+$('.counter').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 6000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+  
+});
+      </script>
+    </body>
+    </html>
+</body>
+</html>
